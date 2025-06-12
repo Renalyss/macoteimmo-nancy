@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaCoteImmoNancy - Preview</title>
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-light: #2d2d2d;
+            --accent-gold: #d4af37;
+            --text-light: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .hero {
+            height: 100vh;
+            background-color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1613706549747-293f243b829d?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            color: var(--accent-gold);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .estimation-form {
+            background-color: var(--primary-light);
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            border-radius: 4px;
+        }
+
+        .cta-button {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Estimez la valeur de votre bien immobilier</h1>
+            <p>Accompagnons les Nancéiens à vendre leur bien</p>
+        </div>
+    </div>
+
+    <div class="estimation-form">
+        <h2>Estimation immobilière</h2>
+        <form>
+            <div class="form-group">
+                <label for="propertyType">Type de bien</label>
+                <select id="propertyType">
+                    <option value="">Sélectionnez...</option>
+                    <option value="appartement">Appartement</option>
+                    <option value="maison">Maison</option>
+                    <option value="terrain">Terrain</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="surface">Surface (m²)</label>
+                <input type="number" id="surface" min="10">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Adresse ou quartier</label>
+                <input type="text" id="address">
+            </div>
+
+            <div class="form-group">
+                <label for="condition">État du bien</label>
+                <select id="condition">
+                    <option value="">Sélectionnez...</option>
+                    <option value="neuf">Neuf</option>
+                    <option value="bon">Bon état</option>
+                    <option value="moyen">État moyen</option>
+                    <option value="a_renover">À rénover</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Téléphone mobile*</label>
+                <input type="tel" id="phone">
+            </div>
+
+            <button type="submit" class="cta-button">
+                Estimer mon bien
+            </button>
+        </form>
+    </div>
+</body>
+</html>
